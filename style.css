@@ -1,0 +1,261 @@
+:root {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(190, 190, 190);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-color: #2a2f3d;
+}
+
+header::after,
+.content-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-bottom: 1px solid #fff;
+}
+
+/* header start */
+header {
+  padding: 20px 40px;
+  height: 100vh;
+  text-align: center;
+}
+
+nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: inline-block;
+  padding: 140px 0 20px;
+}
+
+.header-content > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+header .small-text {
+  font-size: 0.9rem;
+}
+
+header .page-router {
+  display: flex;
+  justify-content: space-around;
+}
+
+header .social-media {
+  text-align: right;
+}
+
+.social-media a:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* Content Section*/
+
+.content,
+.skill-row,
+.project-row,
+.tools-row {
+  display: flex;
+}
+
+.content:not(:first-child) {
+  margin-top: 30px;
+}
+.content .content-item {
+  flex: 1 1 0;
+  padding: 20px 30px;
+}
+
+.content > :nth-child(1) {
+  border-right: 2px solid #fff;
+}
+
+/* box-1 */
+
+#skills,
+#contact {
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+#about > p {
+  text-align: justify;
+}
+
+.skill-row {
+  flex-wrap: wrap;
+}
+
+.skill-row > div {
+  flex: 1 1 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.skill-row i {
+  padding: 15px;
+  color: #2a2f3d;
+  background-color: #ffa3a3;
+  border: 3px solid #2a2f3d;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.skill-row p {
+  margin-bottom: 0;
+}
+/* box-2 */
+
+.project-row {
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.project-row .project-name {
+  align-self: flex-start;
+  margin-right: 10px;
+  flex-shrink: 0;
+  padding: 3px;
+  color: #2a2f3d;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.project-row .tools-row {
+  flex-wrap: wrap;
+  /* flex  */
+}
+
+.tools-row > * {
+  padding: 3px 4px;
+  flex: 0 1 0;
+  margin: 2px;
+  color: #2a2f3d;
+  background-color: #ffa3a3;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Contact */
+.form-wrapper {
+  text-align: center;
+}
+
+.form-header,
+.form-body {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  width: 100%;
+  margin: 0 auto 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  width: 98%;
+  border-radius: 6px;
+  border: 0;
+  transition: 0.3s width ease;
+}
+
+.form-group input:focus,
+textarea:focus {
+  width: 100%;
+  /* background-color: #cecece; */
+  outline: 0;
+}
+
+/* micro-styling */
+
+.headline {
+  /* font-family: "Cutive", serif; */
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.red {
+  color: #ffa3a3;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #fff;
+}
+
+.light-bg {
+  background-color: #fff;
+  color: #2a2f3d;
+}
+
+/* Media Que */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  header {
+    height: 80vh;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .content > div:nth-child(1) {
+    border-right: 0;
+  }
+
+  #skills,
+  #contact {
+    height: auto;
+    position: static;
+  }
+
+  .project-row {
+    justify-content: center;
+  }
+
+  .tools-row > * {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+}
